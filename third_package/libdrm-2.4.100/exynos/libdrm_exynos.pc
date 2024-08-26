@@ -1,0 +1,11 @@
+prefix=/home/book/workspace/project/rk3568_all_app_demo/third_package/libdrm-2.4.100/bin
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libdrm_exynos
+Description: Userspace interface to exynos kernel DRM services
+Version: 0.7
+Libs: -L${libdir} -ldrm_exynos
+Cflags: -I${includedir} -I${includedir}/libdrm -I${includedir}/exynos
+Requires.private: libdrm

@@ -1,0 +1,11 @@
+prefix=/home/book/workspace/project/rk3568_all_app_demo/third_package/libdrm-2.4.100/bin
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libdrm_omap
+Description: Userspace interface to omap kernel DRM services
+Version: 0.6
+Libs: -L${libdir} -ldrm_omap
+Cflags: -I${includedir} -I${includedir}/libdrm -I${includedir}/omap
+Requires.private: libdrm
